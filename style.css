@@ -1,0 +1,161 @@
+/* ✅ Base font for clean look */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; /* 🔄 Added for full screen layout */
+    padding: 0;
+    background-color: #f0f0f0; /* ✅ Light background for contrast */
+}
+
+/* ✅ Center the calculator in the viewport */
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 🔄 Ensures it's vertically centered */
+}
+
+/* 🔄 Made width responsive, added padding and rounded corners */
+.calculator {
+    width: 100%;
+    max-width: 320px; /* ✅ Better for mobile and desktop */
+    background-color: #2e2e2e;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* ✅ Input field container */
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 🔄 Improved input field look */
+input {
+    background-color: aliceblue;
+    font-size: 1.2rem; /* ✅ Scalable text */
+    height: 50px;
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    box-sizing: border-box;
+}
+
+/* ✅ Rows wrap buttons on small screens */
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* 🔄 Wrap buttons responsively */
+    margin-top: 10px;
+    gap: 10px; /* 🔄 Use gap instead of margin for cleaner layout */
+}
+
+/* 🔄 Made buttons larger and more touch-friendly */
+.col {
+    height: 50px;
+    width: 50px;
+    display: flex; /* 🔄 Flexbox for perfect centering */
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: #000000;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* ✅ Button hover feedback */
+.col:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ Operator button styling */
+.operator {
+    background-color: #cfcfcf;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+}
+
+/* ✅ Dot button styling */
+.dot {
+    font-size: 1.4rem;
+}
+
+/* 🔄 Improved Clear button size */
+.Clear {
+    width: 90px;
+    height: 45px;
+    background-color: #ff4d4d;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* ✅ Equal button with green gradient */
+.equal {
+    background: linear-gradient(to bottom, #2ecc71, #27ae60);
+    color: white;
+    font-weight: bold;
+}
+
+/* -----------------------------------
+   📱 Responsive Media Queries
+------------------------------------ */
+
+/* 🔄 For mobile devices (up to 480px wide) */
+@media (max-width: 480px) {
+    .col {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .Clear {
+        width: 80px;
+        height: 42px;
+        font-size: 0.95rem;
+    }
+
+    input {
+        font-size: 1rem;
+        height: 45px;
+    }
+
+    .calculator {
+        padding: 10px;
+        max-width: 90%;
+    }
+}
+
+/* 🔄 For tablets and mid-range devices */
+@media (min-width: 481px) and (max-width: 768px) {
+    .col {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+
+    .Clear {
+        width: 90px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    input {
+        font-size: 1.1rem;
+        height: 48px;
+    }
+
+    .calculator {
+        max-width: 280px;
+    }
+}

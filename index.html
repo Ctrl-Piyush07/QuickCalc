@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="input-fields">
+            <input type="text" id="input" disabled>
+            </div>
+            <div class="buttons">
+                <div class="row">
+                    <div onclick="handleClick(this)" class="col operator cal-buttons">+</div>
+                     <div onclick="handleClick(this)" class="col operator cal-buttons">-</div>
+                      <div onclick="handleClick(this)" class="col operator cal-buttons">*</div>
+                       <div onclick="handleClick(this)" class="col operator cal-buttons">/</div>
+                </div>
+                <div class="row">
+                    <div onclick="handleClick(this)" class="col cal-buttons">7</div>
+                     <div onclick="handleClick(this)" class="col cal-buttons">8</div>
+                      <div onclick="handleClick(this)" class="col cal-buttons">9</div>
+                       <div onclick ="handleClick(this)" class="col operator cal-buttons">%</div>
+                </div>
+                <div class="row">
+                    <div onclick="handleClick(this)" class="col cal-buttons">4</div>
+                     <div onclick="handleClick(this)" class="col cal-buttons">5</div>
+                      <div onclick="handleClick(this)" class="col cal-buttons">6</div>
+                        <div onclick="deleteValue()" class="col cal-buttons">⌫</div>
+                </div>
+                <div class="row">
+                    <div onclick="handleClick(this)" class="col cal-buttons">1</div>
+                     <div onclick="handleClick(this)" class="col cal-buttons">2</div>
+                      <div onclick="handleClick(this)" class="col cal-buttons">3</div>
+                     <div onclick="calculate()" class="col equal cal-buttons">=</div>
+                </div>
+                <div class="row">
+                      <div onclick="handleClick(this)" class="col cal-buttons">0</div>
+                        <div onclick="handleClick(this)" class="col dot cal-buttons">.</div>
+                       <div onclick="reset()" class="col Clear cal-buttons">Clear</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
